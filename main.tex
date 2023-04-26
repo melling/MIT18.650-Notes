@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{fancyhdr} % to change header and footers
+\graphicspath{ {./images/} }
+\usepackage{subfiles} % Best loaded last in the preamble
+
+%\usepackage[left=1.0in,top=1.0in,right=1.0in,bottom=1.0in]{geometry} % Document margins
+
+% \setlength{\droptitle}{-12em}   % This is your set screw
+% Turn on the style
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhead{}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+
+\title{MIT 18.650}
+\author{Michael Mellinger \\ \href{mailto:mmellinger66@gmail.com}{mmellinger66@gmail.com} }
+
+%\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+These are my personal notes from the \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/}{MIT 18.650 videos}.
+
+Other references:
+
+\begin{itemize}
+    \item \href{http://people.csail.mit.edu/rmwu/static/files/notes/18-650-notes.pdf}{Rachel Wu's 18.650 Notes}
+    \item 
+\end{itemize}
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l l l}
+Introduction to Statistics & L1 - L2 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/7836ea6d101679d495194bc3c5f227fa_MIT18_650F16_Introduction.pdf}{Slides}\\
+Parametric Inference & L3 - L4 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/335fd85c0a2ecffc49c781502b3d9b95_MIT18_650F16_Parametric_Inf.pdf}{Slides}\\
+Maximum Likelihood Estimation & L4 (from 33mins39secs) - L6 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/36624c2682b346b07cab3da416b752a7_MIT18_650F16_Maximum_LE.pdf}{Slides}\\
+The Method of Moments & L6 (from 32min35) & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/d80691f22540361439d2e3e145d61783_MIT18_650F16_Method_of_Moments.pdf}{Slides}\\
+Parametric Hypothesis Testing & L7-L11 (to 30-35mins?) (no L10) & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/11b4116aa55b4e0288141bd40a39104f_MIT18_650F16_Parametric_HT.pdf}{Slides}\\
+Testing Goodness of Fit & L11-L12 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/9ecfca905ca7a84c485cba65854fadb1_MIT18_650F16_Testing_GF.pdf}{Slide}\\
+Regression & L13-L15 (no L16) & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/2c0395a301a2ca798b1c0ee18cf6eedc_MIT18_650F16_Regression.pdf}{Slides}\\
+Bayesian Statistics & L17-L18 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/84a7bb421c62e9edf6721c0bd2465361_MIT18_650F16_Bayesian_Statistics.pdf}{Slides}\\
+Principal Component Analysis & L19-L20 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/d85e1a9d113142ade8ce5e4f5ef0b4e8_MIT18_650F16_PCA.pdf}{Slides}\\
+Generalized Linear Models & L21-L24 & \href{https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/dff89368051a5feae72b39c6422d0752_MIT18_650F16_GLM.pdf}{Slides}\\
+    \end{tabular}
+    \caption{Lecture to topic breakdown}
+    \label{tab:my_label}
+\end{table}
+
+\section{Lecture 2: Introduction to Statistics}
+
+\section{Lecture 3: Parametric Inference}
+
+\subfile{lectures/lecture03}
+
+\section{Lecture 4: Parametric Inference/Maximum Likelihood} 
+
+\subfile{lectures/lecture04}
+
+\section{Lecture 5: Maximum Likelihood}
+
+\subfile{lectures/lecture05}
+
+\section{Lecture 6: Maximum Likelihood/Method of Moments}
+
+\subfile{lectures/lecture06}
+
+\section{Lecture 7: Parametric Hypothesis Testing}
+
+\subfile{lectures/lecture07}
+
+\section{Lecture 8: Parametric Hypothesis Testing}
+
+\marginpar{\href{https://youtu.be/4HRhg4eUiMo}{Video}}
+
+\section{Lecture 9: Parametric Hypothesis Testing}
+
+\marginpar{\href{https://youtu.be/QXkOaifVfW4}{Video}}
+
+\section{Lecture 10: Missing - }
+
+\section{Lecture 11: Parametric Hypothesis Testing/Testing Goodness of Fit}
+
+\marginpar{\href{https://youtu.be/a66tfLdr6oY}{Video}}
+
+\section{Lecture 12: Testing Goodness of Fit}
+
+\marginpar{\href{https://youtu.be/vMaKx9fmJHE}{Video}}
+
+\section{Lecture 13: Regression}
+
+\marginpar{\href{https://youtu.be/yP1S37BiEsQ}{Video}}
+
+\section{Lecture 14: Regression}
+
+\marginpar{\href{https://youtu.be/JBIz7UadY5M}{Video}}
+
+\section{Lecture 15: Regression}
+
+\marginpar{\href{https://youtu.be/V4xOdtqic3o}{Video}}
+
+\section{Lecture 16: Missing -}
+
+\section{Lecture 17: Bayesian Statistics}
+
+\marginpar{\href{https://youtu.be/bFZ-0FH5hfs}{Video}}
+
+\section{Lecture 18: Bayesian Statistics}
+
+\marginpar{\href{https://youtu.be/k2inA31Gups}{Video}}
+
+\section{Lecture 19: Principal Component Analysis}
+
+\marginpar{\href{https://youtu.be/WW3ZJHPwvyg}{Video}}
+
+\section{Lecture 20: Principal Component Analysis}
+
+\marginpar{\href{https://youtu.be/a1ZCeFpeW0o}{Video}}
+
+\section{Lecture 21: Generalized Linear Model}
+
+\marginpar{\href{https://youtu.be/X-ix97pw0xY}{Video}}
+
+\section{Lecture 22: Generalized Linear Models}
+
+\marginpar{\href{https://youtu.be/mc1y8m9-hOM}{Video}}
+
+\section{Lecture 23: Generalized Linear Models}
+
+\marginpar{\href{https://youtu.be/OYcdw5vOgIc}{Video}}
+
+\section{Lecture 24: Generalized Linear Models}
+
+\marginpar{\href{https://youtu.be/lWW54ts9Ubo}{Video}}
+
+\end{document}
+
+

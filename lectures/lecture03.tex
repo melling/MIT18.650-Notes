@@ -1,0 +1,164 @@
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k}{Video}}
+
+\subsection{Parametric Inference}
+
+$X_1, \ldots, X_n$ iid RVs
+
+We'd like to make assumptions about the distribution.  This reduces the degress of freedom (\href{https://youtu.be/TSkDZbGS94k?t=4m35s}{4:35})
+
+Want something small enough that we can have some averaging going on but large enough that it contains a distribution that makes sense. (4:50)
+
+\subsubsection*{Simplest Example }
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=5m0s}{5:00})}
+
+$X_i \in {0,1}, X \sim Ber(p)$. 
+
+Since iid, $X_i$\'s share same p.\\\\
+Estimate p.
+\\
+
+\subsubsection{Student Siblings Example}
+
+$\{1,2,3,4,5,6, \ge 7\}$
+
+Describe with PMF:
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
+ \hline 
+ x & 1 & 2 & 3 & 4 &5 &6 &7 \\ 
+  \hline 
+ $p(x)$ & $p_1$ & $p_2$ & \\ 
+\end{tabular}
+\end{center}
+There's a problem because sample size is not large.
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=12m0s}{12:00}}
+
+Use Poisson $X \sim Pois(\lambda)$
+
+$$P(X=x)=\frac{\lambda^2}{x!}e^{-\lambda} > 0$$
+Always positive.\\
+Only 1 parameter needed instead of 7.
+
+\subsubsection*{Modeling 101} 
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=14m20s}{14:20})}
+
+The purpose of modeling is to restrict the space of possible distributions to a subspace that's actually plausible but much simpler to esimate.
+
+\subsubsection*{Definition: Statistical Experiment}
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=15m25s}{15:25}}
+
+$$
+(E, P_{\theta} | \theta \in \Theta)
+$$
+E - sample space\\
+$P_{\theta}$ - Family of distributions. (e.g $Pois(\theta), Ber(\theta), exp(\frac{1}{\theta^2})$\\
+
+Indexed by $\theta$. $\theta$ completely describes the distribution.  Could be $\theta=(p_1, \cdots, p_7) \rightarrow PMF$
+
+\marginpar{(18:50)} Once I estimate the parameter, I know the exact distribution that I have.\\
+
+\marginpar{(19:10)} Could have different parameters that work.  Want one that is well-specified. ie. in the distribution of your data.
+
+$$X, \exists \theta \in \Theta, X \sim P_{\theta}$$
+
+True parameter is $\theta^{\ast}$
+
+$\theta \in r^d$ with finite coordinates. This is a parameter model/statistics.
+
+
+1) Bernoulli trials (Model) \href{https://youtu.be/TSkDZbGS94k?t=28m30s}{29:30})\\
+
+Experiment: $(\{0,1\}, \{Bern(p), p \in (0,1)\}$
+
+
+
+2) Expontential (Model) )\\
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=32m00s}{32:00}}
+
+3) Poisson (Model)
+
+
+4) Sibling (Model) - a PMF )
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=34m25s}{34:25}}
+
+Using PMF is messier.
+
+
+
+5) Gaussian (Model) \\
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=37m00s}{37:00})}
+
+$$
+(\mathbb{R}, \{N(\mu,\sigma)\}, \mu \in \mathbb{R}, \sigma^2 > 0
+$$
+
+5.1) Gaussian with known variance. \\
+
+We have measurements.  Some instruments have variance printed on the label.\\
+
+$$
+(\mathbb{R}, \{N(\mu,\sigma)\}, \mu \in \mathbb{R}, \sigma=manufacturer
+$$
+
+6) Censored Exponential (Model)
+
+a) See a lot of censored data in survival analysis
+
+b) Salary surveys
+
+observe $X=\mathbbm{1}(X>5)$
+
+$$
+\mathbbm{1}(A) = \begin{cases} 
+1, \text{if A is true}\\
+0, \text{if A is false}
+\end{cases}
+$$
+\subsubsection{Uniform (\href{https://youtu.be/TSkDZbGS94k?t=49m00s}{49:00})}
+
+$X \sim Unif([0,\theta]), \theta > 0$ Probability distribution/family of parameters.
+
+$$
+([0,\infty]), \{Unif(\theta)\}_{\theta > 0}
+$$
+
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=53m00s}{53:00})}  Now we know the answer to the question: "What is a statistical model?"\\
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=54m40s}{54:40})}
+
+
+$\theta \mapsto P_{\theta}$ is \href{https://en.wikipedia.org/wiki/Injective_function}{injective}.
+
+$$
+equivalent = \begin{cases}
+    \text{if } \theta \ne \theta^{\prime} P_{\theta} \ne P_{\theta}^{\prime}\\
+    P_{\theta} = P_{\theta}^{\prime} \Rightarrow \theta = \theta^{\prime}
+\end{cases}
+$$
+parameter is identifiable in this model.
+
+\subsubsection{What is an Estimator}
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=1h4m0s}{(1:04:00)}}
+
+An estimator is said to be \textbf{consistent} if we collect more data, it gets closer to the true parameter.
+
+\begin{itemize}
+    \item \textbf{weakly convergent} - converges in probability
+    \item \textbf{strongly convergent} - converges almost surely (a.s.)
+\end{itemize}
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=1h11m15s}{(1:11:15)})} How far we are from the estimator is called the bias.\\
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=1h130s}{(1:13:00)})(1:13:00)} Bias isn't telling us the entire picture.
+
+\marginpar{\href{https://youtu.be/TSkDZbGS94k?t=1h14m00s}{(1:14:00)})} Quadratic Risk $(\ell_2)$ of $\theta$
